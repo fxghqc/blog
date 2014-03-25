@@ -7,11 +7,10 @@
 
 var path = require('path');
 var parse = require('co-body');
-var wait = require('co-wait');
 var logger = require('koa-logger');
 var route = require('koa-route');
 var livereload = require('koa-livereload');
-var render = require('koa-ejs');
+var render = require('koa-swig');
 var koa = require('koa');
 var app = koa();
 
@@ -19,10 +18,9 @@ var app = koa();
 
 render(app, {
   root: path.join(__dirname, 'views'),
-  layout: 'template',
-  viewExt: 'html',
+  autoescape: true,
   cache: false,
-  debug: true
+  ext: 'html'
 });
 
 // "database"
