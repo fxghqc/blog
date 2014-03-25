@@ -7,18 +7,21 @@
   "dependencies": {
     "co": "^3.0.0",
     "co-body": "0.0.1",
-    "co-views": "^0.1.0",
     "koa": "^0.5.0",
     "koa-logger": "^1.1.0",
     "koa-route": "^1.0.2",
     "koa-static": "^1.4.0",
-    "swig": "^1.2.2"
+    "koa-ejs": "0.0.3",
+    "co-wait": "0.0.0"
   },
   "devDependencies": {
     "co": "*",
     "mocha": "*",
     "should": "*",
-    "supertest": "*"
+    "supertest": "*",
+    "grunt": "~0.4.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "koa-livereload": "^0.1.22"
   },
   "scripts": {
     "test": "NODE_ENV=test make test"

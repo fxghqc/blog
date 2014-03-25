@@ -1,15 +1,29 @@
 
+'use strict';
+
 /**
  * Module dependencies.
  */
 
-var render = require('./lib/render');
+var path = require('path');
+var parse = require('co-body');
+var wait = require('co-wait');
 var logger = require('koa-logger');
 var route = require('koa-route');
-var views = require('co-views');
-var parse = require('co-body');
+var livereload = require('koa-livereload');
+var render = require('koa-ejs');
 var koa = require('koa');
 var app = koa();
+
+// render
+
+render(app, {
+  root: path.join(__dirname, 'views'),
+  layout: 'template',
+  viewExt: 'html',
+  cache: false,
+  debug: true
+});
 
 // "database"
 
@@ -18,6 +32,7 @@ var articles = [];
 // middleware
 
 app.use(logger());
+app.use(livereload());
 
 // route middleware
 
@@ -31,7 +46,7 @@ app.use(route.get('/article/:id', show));
  */
 
 function *list() {
-  this.body = yield render('list', { articles: articles });
+  yield this.render('list', { articles: articles });
 }
 
 /**
@@ -41,7 +56,7 @@ function *list() {
 function *show(id) {
   var article = articles[id];
   if (!article) this.throw(404, 'invalid post id');
-  this.body = yield render('show', { article: article });
+  yield render('show', { article: article });
 }
 
 // listen
