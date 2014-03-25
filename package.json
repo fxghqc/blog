@@ -1,0 +1,30 @@
+{
+  "name": "blog",
+  "description": "",
+  "version": "0.0.1",
+  "repository": "",
+  "bugs": "",
+  "dependencies": {
+    "co": "^3.0.0",
+    "co-body": "0.0.1",
+    "co-views": "^0.1.0",
+    "koa": "^0.5.0",
+    "koa-logger": "^1.1.0",
+    "koa-route": "^1.0.2",
+    "koa-static": "^1.4.0",
+    "swig": "^1.2.2"
+  },
+  "devDependencies": {
+    "co": "*",
+    "mocha": "*",
+    "should": "*",
+    "supertest": "*"
+  },
+  "scripts": {
+    "test": "NODE_ENV=test make test"
+  },
+  "engines": {
+    "node": ">= 11.3"
+  },
+  "license": "MIT"
+}
