@@ -1,15 +1,9 @@
-{% extends 'layout.html' %}
-
-{% block title %}Fx-articles{% endblock %}
-
-{% block content %}
-  <p>There are <strong>{{ posts.length }}</strong> articles</p>
-  <ul id="posts">
-    {% for article in articles %}
-      <li>
-        <h2>{{ article.title }}</h2>
-        <p><a href="/article/{{ article.id }}">Read article</a></p>
-      </li>
-    {% endfor %}
-  </ul>
-{% endblock %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>123{{title}}</title>
+</head>
+<body>
+  <p>{{content}}</p>
+</body>
+</html>

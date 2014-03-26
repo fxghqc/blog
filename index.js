@@ -11,9 +11,11 @@ var logger = require('koa-logger');
 var route = require('koa-route');
 var livereload = require('koa-livereload');
 var render = require('koa-swig');
+var hbs = require('koa-hbs');
 var koa = require('koa');
 var app = koa();
 
+/*
 // render
 
 render(app, {
@@ -22,6 +24,7 @@ render(app, {
   cache: false,
   ext: 'html'
 });
+*/
 
 // "database"
 
@@ -29,6 +32,10 @@ var articles = [];
 
 // middleware
 
+app.use(hbs.middleware({
+  viewPath: __dirname + '/views',
+  extname: '.html'
+}));
 app.use(logger());
 app.use(livereload());
 
