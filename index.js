@@ -15,20 +15,25 @@ var hbs = require('koa-hbs');
 var koa = require('koa');
 var app = koa();
 
-/*
-// render
-
-render(app, {
-  root: path.join(__dirname, 'views'),
-  autoescape: true,
-  cache: false,
-  ext: 'html'
-});
-*/
-
 // "database"
 
-var articles = [];
+var articles = [
+  {
+    title: "title1",
+    content: "content1"
+  },
+  {
+    title: "title2",
+    content: "content2"
+  },
+  {
+    title: "title3",
+    content: "content3"
+  },
+  {
+    title: "title4",
+    content: "content4"
+}];
 
 // middleware
 

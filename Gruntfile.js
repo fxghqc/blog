@@ -4,6 +4,7 @@ module.exports = function (grunt) {
     watch: {
       options: {
         livereload: true,
+	spawn: false,
       },
       src: {
         files: ['**/*.js', '**/*.html'],
