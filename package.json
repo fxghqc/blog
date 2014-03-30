@@ -11,7 +11,6 @@
     "koa-logger": "^1.1.0",
     "koa-route": "^1.0.2",
     "koa-static": "^1.4.0",
-    "koa-swig": "0.0.3",
     "koa-hbs": "^0.4.3"
   },
   "devDependencies": {
@@ -21,7 +20,10 @@
     "supertest": "*",
     "grunt": "~0.4.2",
     "grunt-contrib-watch": "~0.5.3",
-    "koa-livereload": "^0.1.22"
+    "koa-livereload": "^0.1.22",
+    "open": "0.0.4",
+    "grunt-nodemon": "^0.2.1",
+    "grunt-concurrent": "^0.5.0"
   },
   "scripts": {
     "test": "NODE_ENV=test make test"
