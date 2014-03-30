@@ -5,12 +5,9 @@
  * Module dependencies.
  */
 
-var path = require('path');
-var parse = require('co-body');
 var logger = require('koa-logger');
 var route = require('koa-route');
 var livereload = require('koa-livereload');
-var render = require('koa-swig');
 var hbs = require('koa-hbs');
 var koa = require('koa');
 var app = koa();
